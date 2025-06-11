@@ -3,13 +3,13 @@
     <item
         android:id="@+id/nav_goals"
         android:title="Goals"
-        android:icon="@drawable/ic_goals" />
+        android:icon="@android:drawable/ic_menu_agenda" />
     <item
         android:id="@+id/nav_daily"
         android:title="Today"
-        android:icon="@drawable/ic_daily_tasks" />
+        android:icon="@android:drawable/ic_menu_today" />
     <item
         android:id="@+id/nav_recurring"
         android:title="Recurring"
-        android:icon="@drawable/ic_recurring_tasks" />
+        android:icon="@android:drawable/ic_menu_revert" />
 </menu>

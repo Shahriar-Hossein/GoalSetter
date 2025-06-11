@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/nav_profile" android:title="Profile" android:icon="@drawable/ic_person" />
-    <item android:id="@+id/nav_settings" android:title="Settings" android:icon="@drawable/ic_settings" />
+    <item android:id="@+id/nav_settings" android:title="Settings" android:icon="@drawable/ic_circle" />
     <item android:id="@+id/nav_night_mode" android:title="Night Mode" android:icon="@drawable/ic_dark_mode" />
 </menu>
