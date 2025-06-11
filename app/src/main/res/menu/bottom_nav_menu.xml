@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_goals"
+        android:title="Goals"
+        android:icon="@drawable/ic_goals" />
+    <item
+        android:id="@+id/nav_daily"
+        android:title="Today"
+        android:icon="@drawable/ic_daily_tasks" />
+    <item
+        android:id="@+id/nav_recurring"
+        android:title="Recurring"
+        android:icon="@drawable/ic_recurring_tasks" />
+</menu>

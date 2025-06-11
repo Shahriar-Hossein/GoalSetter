@@ -1,0 +1,55 @@
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# IntelliJ / Android Studio project files
+*.iml
+/.idea/
+/.idea/caches/
+/.idea/libraries/
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Android captures (screenshots, videos)
+captures/
+
+# Native build folders
+.externalNativeBuild/
+.cxx/
+
+# Kotlin
+*.kotlin_module
+
+# Generated APKs and build outputs
+*.apk
+*.ap_
+*.aab
+*.dex
+
+# Proguard folder generated files
+mapping.txt
+proguard/
+
+# Logs
+*.log
+
+# Android Studio Navigation Editor temp files
+.navigation/
+
+# Crashlytics generated files
+crashlytics.properties
+
+# Google Services config (keep out of version control if sensitive)
+google-services.json
+
+# Misc
+*.hprof
