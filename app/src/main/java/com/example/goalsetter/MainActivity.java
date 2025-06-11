@@ -20,6 +20,9 @@ import com.example.goalsetter.ui.goals.GoalsFragment;
 import com.example.goalsetter.ui.daily.DailyFragment;
 import com.example.goalsetter.ui.recurring.RecurringFragment;
 
+import com.example.goalsetter.R;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,36 +65,50 @@ public class MainActivity extends AppCompatActivity {
 
     private void initBottomNavigation() {
         bottomNav.setOnItemSelectedListener(item -> {
-            switch (item.getItemId()) {
-                case R.id.nav_goals:
-                    loadFragment(new GoalsFragment(), "Goals");
-                    return true;
-                case R.id.nav_daily:
-                    loadFragment(new DailyFragment(), "Daily Tasks");
-                    return true;
-                case R.id.nav_recurring:
-                    loadFragment(new RecurringFragment(), "Recurring Tasks");
-                    return true;
+            int id = item.getItemId();
+            if (id == R.id.nav_goals) {
+                loadFragment(new GoalsFragment(), "Goals");
+                return true;
+            } else if (id == R.id.nav_daily) {
+                loadFragment(new DailyFragment(), "Daily Tasks");
+                return true;
+            } else if (id == R.id.nav_recurring) {
+                loadFragment(new RecurringFragment(), "Recurring Tasks");
+                return true;
             }
             return false;
         });
+
     }
 
     private void initDrawerMenu() {
         navDrawer.setNavigationItemSelectedListener(item -> {
-            switch (item.getItemId()) {
-                case R.id.nav_profile:
-                    Toast.makeText(this, "Profile selected", Toast.LENGTH_SHORT).show();
-                    break;
-                case R.id.nav_settings:
-                    Toast.makeText(this, "Settings selected", Toast.LENGTH_SHORT).show();
-                    break;
-                case R.id.nav_night_mode:
-                    toggleNightMode();
-                    break;
+            int id = item.getItemId();
+            if(id == R.id.nav_profile){
+                Toast.makeText(this, "Profile selected", Toast.LENGTH_SHORT).show();
+                return true;
+            }else if(id == R.id.nav_settings){
+                Toast.makeText(this, "Settings selected", Toast.LENGTH_SHORT).show();
+                return true;
+            }else if(id == R.id.nav_night_mode){
+                toggleNightMode();
+                return true;
             }
             drawerLayout.closeDrawer(GravityCompat.START);
-            return true;
+            return false;
+//            switch (item.getItemId()) {
+//                case R.id.nav_profile:
+//                    Toast.makeText(this, "Profile selected", Toast.LENGTH_SHORT).show();
+//                    break;
+//                case R.id.nav_settings:
+//                    Toast.makeText(this, "Settings selected", Toast.LENGTH_SHORT).show();
+//                    break;
+//                case R.id.nav_night_mode:
+//                    toggleNightMode();
+//                    break;
+//            }
+
+//            return true;
         });
     }
 
