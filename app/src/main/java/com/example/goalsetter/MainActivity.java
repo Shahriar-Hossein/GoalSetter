@@ -2,6 +2,7 @@ package com.example.goalsetter;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
 // import ui's
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private MaterialToolbar topAppBar;
     private BottomNavigationView bottomNav;
     private NavigationView navDrawer;
+    private FloatingActionButton fabAdd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initViews();
+        fabAdd.setOnClickListener(this::onAddButtonClicked);
         initTopAppBar();
         initDrawerMenu();
         initBottomNavigation();
@@ -50,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         topAppBar = findViewById(R.id.topAppBar);
         bottomNav = findViewById(R.id.bottomNavigationView);
         navDrawer = findViewById(R.id.navigation_view);
+        fabAdd = findViewById(R.id.fab_add);
     }
 
     private void initTopAppBar() {
@@ -118,6 +124,11 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
         topAppBar.setTitle(title);
     }
+
+    private void onAddButtonClicked(View view){
+        Toast.makeText(this, "Add button clicked", Toast.LENGTH_SHORT).show();
+    }
+
 
     private void toggleNightMode() {
         int mode = AppCompatDelegate.getDefaultNightMode();
